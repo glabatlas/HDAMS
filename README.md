@@ -11,8 +11,7 @@ cd ./HDAMS/
 ## Data preprocessing 
 * Obtain original m6a ratio: count data of all m6a candidate sites' sequences (with DRACH motif) extracted from BAM file will first be used to calculate the original m6a ratio of each sequence.
   
-  ">>Rscript ./dataprocessing/Origin-ratio-calculation.R control_group_file.txt num_of_smaples_in_control treat_group_file.txt num_of_smaples_in_treat"
-  
+  '''>>Rscript ./dataprocessing/Origin-ratio-calculation.R control_group_file.txt num_of_smaples_in_control treat_group_file.txt num_of_smaples_in_treat''' 
 * Count data normalization: to obtain the normalized IP and INPUT counts. The sites:(1)seqeucnces overlap with all exomepeak calling peaks < 25bp; (2)average IP or INPUT counts<20bp; will be automatically filtered out before normalization. 
   
   '>>Rscript ./dataprocessing/count-normalization.R control_group_file.txt num_of_smaples_in_control treat_group_file.txt num_of_smaples_in_treat' 
