@@ -19,7 +19,7 @@ cd ./HDAMS/
   
 * **Count data normalization:** to obtain the normalized IP and INPUT counts. The sites: (1) seqeucnces overlap with all exomepeak calling peaks < 25bp; (2)average IP or INPUT counts < 20; will be automatically filtered out before normalization. 
   
-        >> Rscript ./dataprocessing/count-normalization.R control_group_file.txt num_of_smaples_in_control treat_group_file.txt num_of_smaples_in_treat 
+        >> Rscript ./dataprocessing/count-normalization.R control_group_file.txt num_of_smaples_in_control treat_group_file.txt num_of_smaples_in_treat selected_seqs_list_overlap_with_exomepeak_calling.txt
 
 * **Obtain differential analysis format:** differential format data will be used to input HDAMS differential model to perform differential analysis of sites.
 
