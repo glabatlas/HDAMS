@@ -28,7 +28,7 @@ cd ./HDAMS/
 ## Site-specific antibody specificity prediction
 * **Predict site-specific antibody specificity:** input the sequences (center-position is the condidate site, with 151bp) and multiple types features are automatically extracted to predict its specificty.  
 
-      >> python ./code/predict_specifity.py --input input_sequence_file.txt --length seq_len --output output_file.txt  
+      >> python ./code/predict_specificity.py --input input_sequence_file.txt --length seq_len --output output_file.txt  
 
 * **Re-train the default ensemble prediction model:** if you want to re-train the default fitted model, we also provide the training code and can be used directly as follows. (Note: new fitted model will be used and may have minor inconsistent comparing with the default model, as randomly tree-based feature selection strategy was used.)
 
