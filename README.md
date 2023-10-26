@@ -15,7 +15,7 @@ cd ./HDAMS/
 ## Data preprocessing 
 * **Obtain DRACH sequence coverage counts from BAM files:** DRACH sequences (151bp) and its coverage counts are calculated based on genome seqeunce and mapping bam files.
   
-        >> python ./dataprocessing/get-drach-sequence-counts.py --transcript_filename transcript_annotation_file.txt --fasta_filename genome_sequence.fa --bedformat_result_filename result_file.bed --input_bams contr_input_1.bam,contr_input_2.bam,contr_input_3 --ip_bams contr_ip_1.bam,contr_ip_2.bam,contr_ip_3.bam --count_result_filename count_result.txt --tmp_path temp_path_to_store_results  
+        >> python ./dataprocessing/get-drach-sequence-counts.py --transcript_filename transcript_annotation_file.txt --fasta_filename genome_sequence.fa --bedformat_result_filename result_file.bed --input_bams contr_input_1.bam,contr_input_2.bam,contr_input_3.bam --ip_bams contr_ip_1.bam,contr_ip_2.bam,contr_ip_3.bam --count_result_filename count_result.txt --tmp_path temp_path_to_store_results  
 
 * **Obtain original m6a ratio:** original count data of all m6a site-candidate sequences (with DRACH motif) extracted from BAM file will be used to calculate the original m6a ratio of each sequence.
   
