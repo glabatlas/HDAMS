@@ -13,6 +13,9 @@ cd ./HDAMS/
 
 # Usage
 ## Data preprocessing 
+* **Obtain DRACH sequence coverage counts from BAM file:** DRACH sequences (151bp) and its coverage counts are calculated based on genome seqeunce and mapping bam files.
+        >> python ./dataprocessing/get-drach-sequence-counts.py --transcript_filename transcript_annotation_file.txt --fasta_filename genome_sequence.fa --bedformat_result_filename result_file.bed --input_bams contr_input_1.bam,contr_input_2.bam,contr_input_3 --ip_bams contr_ip_1.bam,contr_ip_2.bam,contr_ip_3.bam --count_result_filename count_result.txt --tmp_path temp_path_to_store_results  
+
 * **Obtain original m6a ratio:** original count data of all m6a site-candidate sequences (with DRACH motif) extracted from BAM file will be used to calculate the original m6a ratio of each sequence.
   
         >> Rscript ./dataprocessing/Origin-ratio-calculation.R control_group_file.txt num_of_smaples_in_control treat_group_file.txt num_of_smaples_in_treat
@@ -28,7 +31,7 @@ cd ./HDAMS/
 ## Site-specific antibody specificity prediction
 * **Predict site-specific antibody specificity:** input the sequences (center-position is the condidate site, with 151bp) and multiple types features are automatically extracted to predict its specificty.  
 
-      >> python ./code/predict_specificity.py --input input_sequence_file.txt --length seq_len --output output_file.txt  
+      >> python ./code/predict-specificity.py --input input_sequence_file.txt --length seq_len --output output_file.txt  
 
 * **Re-train the default ensemble prediction model:** if you want to re-train the default fitted model, we also provide the training code and can be used directly as follows. (Note: new fitted model will be used and may have minor inconsistent comparing with the default model, as randomly tree-based feature selection strategy was used.)
 
